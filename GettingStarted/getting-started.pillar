@@ -1,0 +1,8 @@
+{
+  "title": 'Getting Started'
+}
+
+This part will show you how to get a simple Seaside application up and running in your favourite Smalltalk dialect in less than 15 minutes.
+
+${inputFile:GettingStarted/Pharo/pharo.pillar}$
+${inputFile:GettingStarted/Cincom/cincom.pillar}$
