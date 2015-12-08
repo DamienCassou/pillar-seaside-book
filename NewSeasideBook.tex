@@ -1,0 +1,61 @@
+%!TEX TS-program = lualatex
+% -*- mode: LaTeX; -*-
+\documentclass[10pt,twoside,english,showtrims]{support/latex/sbabook/sbabook}
+\let\wholebook=\relax
+
+\usepackage{import}
+\subimport{support/latex/}{common.tex}
+
+%=================================================================
+% Add the path for the figures of each chapter here:
+\graphicspath{
+        {../figures/}
+}
+%=================================================================
+\title{New Seaside Book}
+\author{some people}
+\date{\gitdate\titlebreak[\smallskip]{ -- }\protect\gitCommitInfo}
+%=================================================================
+\begin{document}
+
+% Title page and colophon on verso
+\maketitle
+\pagestyle{titlingpage}
+\thispagestyle{titlingpage} % \pagestyle does not work on the first one…
+
+\cleartoverso
+{\small
+
+  Copyright 2015 by ...
+
+  Book layout and typography based on the \code{sbabook} \LaTeX{} class by Damien Pollet.
+}
+
+
+\frontmatter
+\pagestyle{plain}
+
+
+\chapter*{About this book}
+
+some book introduction
+
+\tableofcontents
+
+\mainmatter
+
+\input{GettingStarted/getting-started}
+\input{Fundamentals/fundamentals}
+
+\backmatter
+
+\end{document}
+
+%=================================================================
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:
